@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNOODHLITE link's</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --pink: #ff9ff3;
+            --peach: #ffcccc;
+            --text: #2d3436;
+        }
+
+        * {
+            font-family: 'Poppins', 'Short Stack', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg, var(--peach), #f8a5c2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .floating-effects {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            border: 2px solid white;
+        }
+
+        .character-main {
+            position: fixed;
+            bottom: -50px;
+            right: -50px;
+            width: 300px;
+            opacity: 0.9;
+            transform: rotate(10deg);
+            transition: all 0.3s;
+            z-index: 0;
+        }
+
+        .character-main:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        h1 {
+            color: var(--text);
+            margin: 1rem 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 0 white;
+            font-family: 'Short Stack', cursive;
+        }
+
+        .bio {
+            background: linear-gradient(45deg, white, #fff5f7);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+            border: 3px dotted var(--pink);
+            position: relative;
+        }
+
+        .bio::after {
+            content: '🪼';
+            position: absolute;
+            right: -10px;
+            top: -15px;
+            font-size: 1.5rem;
+            animation: sparkle 2s infinite;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text);
+            border: 2px solid var(--pink);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .links a:hover::before {
+            left: 100%;
+        }
+
+        .links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
+        }
+
+        .links i {
+            font-size: 1.8rem;
+            color: var(--pink);
+        }
+
+        .anime-text {
+            font-family: 'Short Stack', cursive;
+            color: var(--text);
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3) rotate(30deg); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .character-main {
+                width: 200px;
+                bottom: -30px;
+                right: -30px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-effects"></div>
+    
+    <div class="container animate__animated animate__fadeIn">
+        <h1>Hnoodh Link:D</h1>
+        
+        <div class="bio">
+            <p>💻 Code Witch |  Pixel Artist |  Design Sorceress</p>
+            <p class="anime-text">"Code by hnoodh 🌙<br>
+            Coffee Powered Development ☕"</p>
+        </div>
+
+        <div class="links">
+            <a href="https://www.facebook.com/profile.php?id=61571800051379" target="_blank">
+                <i class='bx bxl-facebook-circle'></i>
+                <span>my facebook acc :3</span>
+            </a>
+            
+            <a href="https://www.instagram.com/hnoodhlite1" target="_blank">
+                <i class='bx bxl-instagram-alt'></i>
+                <span>my Instagram acc :3</span>
+            </a>
+        </div>
+
+        <!-- هنا الجزء المضاف -->
+        <div class="bio" style="margin-top: 20px;">
+            <p class="anime-text">
+                  Lazy Potato Developer -always lazy 🐌  <br>
+                "  Always on Facebook:3
+                <br>
+                (when I'm not busy napping )"
+            </p>
+        </div>
+
+        <img src="character.png" alt="My Character" class="character-main animate__animated animate__bounceInUp">
+    </div>
+
+    <!-- Optional: Add anime.js for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        // Add floating particles animation
+        anime({
+            targets: '.floating-effects',
+            background: ['#ff9ff322', '#f368e022'],
+            duration: 3000,
+            loop: true,
+            easing: 'easeInOutQuad',
+            direction: 'alternate'
+        });
+    </script>
+</body>
+</html>
